@@ -1,0 +1,75 @@
+{
+    "version": 1,
+    "name": "Inputs",
+    "maps": [
+        {
+            "name": "UI",
+            "id": "ce4b7723-f0fc-465b-b5d1-47537e745225",
+            "actions": [
+                {
+                    "name": "Control",
+                    "type": "Button",
+                    "id": "cff8cc67-7dbc-4a9b-8820-c2b06233c4e8",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Alt",
+                    "type": "Button",
+                    "id": "10ae9bb5-3867-4fc2-bd0b-7431b3a08468",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Monitor",
+                    "type": "Button",
+                    "id": "10de6e47-d733-403e-a09d-b060d1790401",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c2fbb079-8ca7-4727-8d38-1f3a19368da1",
+                    "path": "<Keyboard>/leftCtrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Control",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "91be1f67-b7e9-4f2d-b5a8-4253e4a3a803",
+                    "path": "<Keyboard>/leftAlt",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Alt",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "42331af1-aa07-4ec3-a0d5-b6d26c87dd1e",
+                    "path": "<Keyboard>/m",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Monitor",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
