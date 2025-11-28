@@ -17,6 +17,8 @@ namespace SERESESTUDIO.Systems.ControlSystem
         private bool _brake;
         private float _saveRawSpeed;
         private bool _activeControls;
+        private bool _lookLeft;
+        private bool _lookRight;
 
         [SerializeField]
         private TMP_Text _speedText;
@@ -59,6 +61,22 @@ namespace SERESESTUDIO.Systems.ControlSystem
                     _changeDirectionObject.SetActive(false);
                 }
             }
+        }
+        public void SetLookLeft(bool state)
+        {
+            _lookLeft = state;
+        }
+        public bool GetLookLeft()
+        {
+            return _lookLeft;
+        }
+        public void SetLookRight(bool state)
+        {
+            _lookRight = state;
+        }
+        public bool GetLookRight()
+        {
+            return _lookRight;
         }
         public void setActiveControls(bool active)
         {

@@ -11,12 +11,14 @@ namespace SERESESTUDIO.Systems.DrawSystem
         public LineRenderer lineRenderer => _lineRenderer;
         public float screenOffset => _screenOffset;
         public float yOffset => _yOffset;
+        public float intervalRange => _intervalRange;
         [SerializeField]
         private List<Vector3> _points = new List<Vector3>();
 
         private Vector2 _touchPosition;
         private bool _touchScreen;
         private bool _touchTrigger;
+        private float _interval;
 
         [SerializeField]
         private InputActionReference _positionAction;
@@ -28,6 +30,8 @@ namespace SERESESTUDIO.Systems.DrawSystem
         private float _screenOffset;
         [SerializeField]
         private float _yOffset;
+        [SerializeField][Range(0f, 1f)]
+        private float _intervalRange;
         public override void Gameplay()
         {
             base.Gameplay();
@@ -41,10 +45,13 @@ namespace SERESESTUDIO.Systems.DrawSystem
                     _points.Clear();
                     _touchTrigger = true;
                 }
-                AddPoints();
+                if(_interval >= _intervalRange) _interval = 0;
+                if(_interval == 0) AddPoints();
+                _interval += (_interval < _intervalRange) ? Time.deltaTime : 0;
             }
             else
             {
+                _interval = 0;
                 _touchTrigger = false;
             }
             _lineRenderer.positionCount = _points.Count;
