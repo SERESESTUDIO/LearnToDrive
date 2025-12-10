@@ -7,6 +7,7 @@ namespace SERESESTUDIO.Systems.ControlSystem
     {
         public TMP_Text speedText => _speedText;
         public TMP_Text reverseText => _reverseText;
+        public TMP_Text gearText => _gearText;
         public GameObject changeDirectionObj => _changeDirectionObject;
         public RectTransform speedIndicator => _speedIndicator;
         public float totalSpeed => _totalSpeed;
@@ -19,11 +20,14 @@ namespace SERESESTUDIO.Systems.ControlSystem
         private bool _activeControls;
         private bool _lookLeft;
         private bool _lookRight;
+        private int _gear;
 
         [SerializeField]
         private TMP_Text _speedText;
         [SerializeField]
         private TMP_Text _reverseText;
+        [SerializeField]
+        private TMP_Text _gearText;
         [SerializeField]
         private GameObject _changeDirectionObject;
         [SerializeField]
@@ -61,6 +65,11 @@ namespace SERESESTUDIO.Systems.ControlSystem
                     _changeDirectionObject.SetActive(false);
                 }
             }
+            _gearText.text = (_gear == -1) ? "R" : (_gear == 0) ? "N" : _gear.ToString();
+        }
+        public void SetGear(int gear)
+        {
+            _gear = gear;
         }
         public void SetLookLeft(bool state)
         {
@@ -106,7 +115,7 @@ namespace SERESESTUDIO.Systems.ControlSystem
             _reverse = !_reverse;
             if(_reverseText)
             {
-                _reverseText.text = _reverse ? "D" : "R";
+                _reverseText.text = _reverse ? "R" : "D";
             }
         }
         /// <summary>
