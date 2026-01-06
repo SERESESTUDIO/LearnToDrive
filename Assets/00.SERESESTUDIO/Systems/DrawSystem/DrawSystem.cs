@@ -12,6 +12,7 @@ namespace SERESESTUDIO.Systems.DrawSystem
         public float screenOffset => _screenOffset;
         public float yOffset => _yOffset;
         public float intervalRange => _intervalRange;
+        public LayerMask layerMask => _layerMask;
         [SerializeField]
         private List<Vector3> _points = new List<Vector3>();
 
@@ -32,6 +33,8 @@ namespace SERESESTUDIO.Systems.DrawSystem
         private float _yOffset;
         [SerializeField][Range(0f, 1f)]
         private float _intervalRange;
+        [SerializeField]
+        private LayerMask _layerMask;
         public override void Gameplay()
         {
             base.Gameplay();
@@ -61,7 +64,7 @@ namespace SERESESTUDIO.Systems.DrawSystem
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(_touchPosition);
-            if(Physics.Raycast(ray, out hit))
+            if(Physics.Raycast(ray, out hit, 1000, _layerMask))
             {
                 Vector3 point = hit.point + new Vector3(0,_yOffset,0);
                 _points.Add(point);

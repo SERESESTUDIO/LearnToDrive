@@ -2,7 +2,8 @@
     "name": "Mechanics",
     "rootNamespace": "",
     "references": [
-        "GUID:7e6ed7dcab5792a429b65edf3ce36f93"
+        "GUID:7e6ed7dcab5792a429b65edf3ce36f93",
+        "GUID:734d7fb2524ea424085143ea7a90fbce"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -67,6 +67,10 @@ namespace SERESESTUDIO.Systems.ControlSystem
             }
             _gearText.text = (_gear == -1) ? "R" : (_gear == 0) ? "N" : _gear.ToString();
         }
+        public float GetRawAceleration()
+        {
+            return _rawAcceleration;
+        }
         public void SetGear(int gear)
         {
             _gear = gear;
