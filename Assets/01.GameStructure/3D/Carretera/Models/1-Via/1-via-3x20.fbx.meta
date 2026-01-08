@@ -3,7 +3,22 @@ guid: 2a4e112ddf5d5c74b817bf7970d1caf6
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Asfalto
+    second: {fileID: 2100000, guid: 576d1c9bcd3fd8344b7fd0cce10eaa02, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concreto
+    second: {fileID: 2100000, guid: 67003847d55e7354e83fa7e38eb181c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WhiteLine
+    second: {fileID: 2100000, guid: 34cb4d776e0302a4fbc8a98388035ad6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
